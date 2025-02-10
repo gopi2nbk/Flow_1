@@ -3,7 +3,8 @@ name: J9SRP
 on:
   schedule:
     - cron: '*/10 0-23 * * *'
-    - cron: '*/16 0-23 * * *'
+    - cron: '*/20 0-23 * * *'
+    - cron: '*/30 0-23 * * *'
 
 jobs:
   runtests:
