@@ -76,7 +76,7 @@ public class J9_Flow{
 	    
 		RequestSpecification request = RestAssured.given();
 		request.header("Content-Type", "text/json");
-		Response response = request.get("/GetJ9Routes?days="+days+"&group=2&skipdays="+skipdays+"");
+		Response response = request.get("/GetJ9Routes?days="+days+"&group=1&skipdays="+skipdays+"");
 		System.out.println("Response body: " + response.body().asString());
 		String s=response.body().asString();
 		System.out.println(s);
