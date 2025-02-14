@@ -86,7 +86,11 @@ public class J9_Flow{
 		Gson g = new Gson();
 		Database[] mcArray = g.fromJson(s, Database[].class);
 		List<Database> p = Arrays.asList(mcArray);
-		for(Database data:p){
+		//for(Database data:p){
+		int limit = Math.min(p.size(), 26); // Ensure we don't exceed available data
+
+		for (int i = 0; i < limit; i++) {
+		    Database data = p.get(i);
 			
 			
 			
