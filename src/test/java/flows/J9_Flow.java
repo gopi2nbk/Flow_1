@@ -56,16 +56,14 @@ public class J9_Flow{
 			System.out.println(BrowserContants.STG_API_URL);
 		}
 		
-        LocalTime currentTime = LocalTime.now();
-        
-        int days;
-        int skipdays;
-        
-        LocalTime startTime = LocalTime.of(23, 30); // 11 PM
-        LocalTime endTime = LocalTime.of(5, 30); // 5 AM
-        
-        if ((currentTime.isAfter(startTime) && currentTime.isBefore(LocalTime.MIDNIGHT)) ||
-            (currentTime.isAfter(LocalTime.MIDNIGHT) && currentTime.isBefore(endTime)) ||
+                LocalTime startTime = LocalTime.of(18, 30); // 6:30 PM
+        LocalTime endTime = LocalTime.of(0, 10); // 12:10 AM
+        LocalTime currentTime = LocalTime.now(); // Replace with a test value if needed
+
+        int days, skipdays;
+
+        if ((currentTime.isAfter(startTime) && currentTime.isBefore(LocalTime.MAX)) || 
+            (currentTime.isAfter(LocalTime.MIN) && currentTime.isBefore(endTime)) || 
             currentTime.equals(startTime) || currentTime.equals(endTime)) {
             days = 2;
             skipdays = 1;
